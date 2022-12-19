@@ -155,10 +155,10 @@ egl_create(struct egl* egl)
                   egl_get_error_string(eglGetError()));
             exit(EXIT_FAILURE);
         }
-        if ((renderable_type & EGL_PBUFFER_BIT) == 0) {
+        if ((surface_type & EGL_PBUFFER_BIT) == 0) {
             continue;
         }
-        if ((renderable_type & EGL_WINDOW_BIT) == 0) {
+        if ((surface_type & EGL_WINDOW_BIT) == 0) {
             continue;
         }
 
